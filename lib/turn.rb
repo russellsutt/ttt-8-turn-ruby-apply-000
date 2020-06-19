@@ -48,6 +48,6 @@ def turn(board)
   index = input_to_index(user_input)
   if valid_move?(board, index)
     move(board, index)
-    update_array_at_with(array, index, value)
+    update_array_at_with(board, index, value)
   end
 end
