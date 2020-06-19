@@ -31,16 +31,10 @@ end
 def move(board, index, player="X")
   if valid_move?(board, index)
     board[index] = player
-  else
-    "Please enter 1-9"
   end
 end
 
-board = [" ", " ", " "]
 
-def update_array_at_with(board, index, player)
-  board[index] = player
-end
 
 def turn(board)
   puts "Please enter 1-9:"
@@ -48,6 +42,7 @@ def turn(board)
   index = input_to_index(user_input)
   if valid_move?(board, index)
     move(board, index)
-    update_array_at_with(board, index, player)
+  else
+    turn(board)
   end
 end
