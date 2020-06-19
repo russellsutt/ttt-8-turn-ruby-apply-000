@@ -49,7 +49,5 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index)
     display_board
-  else
-    turn(board)
   end
 end
