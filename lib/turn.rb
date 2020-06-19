@@ -34,7 +34,11 @@ def move(board, index, player="X")
   end
 end
 
+board = [" ", " ", " "]
 
+def update_board(array, index, value)
+  array[index] = value
+end 
 
 def turn(board)
   puts "Please enter 1-9:"
@@ -42,6 +46,7 @@ def turn(board)
   index = input_to_index(user_input)
   if valid_move?(board, index)
     move(board, index)
+    update_board(board, index, value)
   else
     turn(board)
   end
